@@ -71,7 +71,348 @@
         
         <!-- Main Content -->
         <div class="content" id="main-content">
-            <!-- Dashboard page content will go here -->
+            <!-- Dashboard Content -->
+<div id="page-dashboard" class="page active-page">
+    <div class="page-header">
+        <h1><i class="fas fa-tachometer-alt"></i> Dashboard</h1>
+        <div class="actions">
+            <div class="search-container">
+                <input type="text" placeholder="Search opportunities...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <button class="btn btn-primary"><i class="fas fa-filter"></i> Filter</button>
+        </div>
+    </div>
+    
+    <!-- Stats Overview -->
+    <div class="stats-overview">
+        <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+            <div class="stat-content">
+                <h3>12</h3>
+                <p>Active Applications</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+            <div class="stat-content">
+                <h3>3</h3>
+                <p>Upcoming Interviews</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-heart"></i></div>
+            <div class="stat-content">
+                <h3>8</h3>
+                <p>Saved Jobs</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-envelope-open-text"></i></div>
+            <div class="stat-content">
+                <h3>5</h3>
+                <p>New Messages</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Recent Activities -->
+    <div class="dashboard-section">
+        <div class="section-header">
+            <h2>Recent Activities</h2>
+            <a href="#" class="view-all">View All <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="activities-list">
+            <div class="activity-item">
+                <div class="activity-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="activity-content">
+                    <h4>Application Submitted</h4>
+                    <p>You applied for <strong>Frontend Developer</strong> at <strong>TechCorp Inc.</strong></p>
+                    <span class="activity-time">2 hours ago</span>
+                </div>
+            </div>
+            <div class="activity-item">
+                <div class="activity-icon">
+                    <i class="fas fa-comment"></i>
+                </div>
+                <div class="activity-content">
+                    <h4>New Message</h4>
+                    <p>Received a message from <strong>Sarah Johnson</strong> regarding your application</p>
+                    <span class="activity-time">Yesterday</span>
+                </div>
+            </div>
+            <div class="activity-item">
+                <div class="activity-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="activity-content">
+                    <h4>Interview Scheduled</h4>
+                    <p>Interview for <strong>UX Designer</strong> position at <strong>Creative Studios</strong></p>
+                    <span class="activity-time">2 days ago</span>
+                </div>
+            </div>
+            <div class="activity-item">
+                <div class="activity-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="activity-content">
+                    <h4>Job Saved</h4>
+                    <p>You saved <strong>Data Analyst Intern</strong> at <strong>Analytics Pro</strong></p>
+                    <span class="activity-time">3 days ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Recommended Jobs -->
+    <div class="dashboard-section">
+        <div class="section-header">
+            <h2>Recommended For You</h2>
+            <a href="#" class="view-all">View All <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="job-cards-grid">
+            <div class="job-card">
+                <div class="job-card-header">
+                    <div class="company-logo small">
+                        <img src="/api/placeholder/48/48" alt="company logo">
+                    </div>
+                    <div class="job-save">
+                        <button class="btn-icon"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="job-card-body">
+                    <h3 class="job-title">Frontend Developer</h3>
+                    <div class="company-name">TechSolutions Ltd</div>
+                    <div class="job-tags">
+                        <span class="job-type">Full-time</span>
+                        <span class="job-location"><i class="fas fa-map-marker-alt"></i> Remote</span>
+                    </div>
+                    <div class="job-salary">
+                        <i class="fas fa-money-bill-wave"></i> $70,000 - $90,000
+                    </div>
+                    <p class="job-description">Looking for an experienced frontend developer with React skills to join our growing team...</p>
+                </div>
+                <div class="job-card-footer">
+                    <span class="post-time">Posted 2 days ago</span>
+                    <button class="btn btn-primary btn-sm">Apply Now</button>
+                </div>
+            </div>
+            
+            <div class="job-card">
+                <div class="job-card-header">
+                    <div class="company-logo small">
+                        <img src="/api/placeholder/48/48" alt="company logo">
+                    </div>
+                    <div class="job-save">
+                        <button class="btn-icon"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="job-card-body">
+                    <h3 class="job-title">UX/UI Design Intern</h3>
+                    <div class="company-name">Creative Minds Agency</div>
+                    <div class="job-tags">
+                        <span class="job-type">Internship</span>
+                        <span class="job-location"><i class="fas fa-map-marker-alt"></i> New York</span>
+                    </div>
+                    <div class="job-salary">
+                        <i class="fas fa-money-bill-wave"></i> $25/hour
+                    </div>
+                    <p class="job-description">Creative agency looking for a UX/UI design intern to help with user research and interface design...</p>
+                </div>
+                <div class="job-card-footer">
+                    <span class="post-time">Posted 1 week ago</span>
+                    <button class="btn btn-primary btn-sm">Apply Now</button>
+                </div>
+            </div>
+            
+            <div class="job-card">
+                <div class="job-card-header">
+                    <div class="company-logo small">
+                        <img src="/api/placeholder/48/48" alt="company logo">
+                    </div>
+                    <div class="job-save">
+                        <button class="btn-icon"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="job-card-body">
+                    <h3 class="job-title">Marketing Coordinator</h3>
+                    <div class="company-name">Global Products Inc.</div>
+                    <div class="job-tags">
+                        <span class="job-type">Contract</span>
+                        <span class="job-location"><i class="fas fa-map-marker-alt"></i> Chicago</span>
+                    </div>
+                    <div class="job-salary">
+                        <i class="fas fa-money-bill-wave"></i> $55,000 - $65,000
+                    </div>
+                    <p class="job-description">Join our marketing team to coordinate campaigns and analyze market trends...</p>
+                </div>
+                <div class="job-card-footer">
+                    <span class="post-time">Posted 3 days ago</span>
+                    <button class="btn btn-primary btn-sm">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Application Progress Summary -->
+    <div class="dashboard-section">
+        <div class="section-header">
+            <h2>Application Progress</h2>
+            <a href="#" class="view-all">View All <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="progress-summary-grid">
+            <div class="progress-card">
+                <div class="progress-card-header">
+                    <div class="progress-status pending">Pending</div>
+                    <div class="company-logo small">
+                        <img src="/api/placeholder/48/48" alt="company logo">
+                    </div>
+                </div>
+                <div class="progress-card-body">
+                    <h3>Frontend Developer</h3>
+                    <p class="company-name">WebTech Solutions</p>
+                    <div class="progress-stages">
+                        <div class="stage completed">
+                            <div class="stage-dot"></div>
+                            <div class="stage-name">Applied</div>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-dot"></div>
+                            <div class="stage-name">Review</div>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-dot"></div>
+                            <div class="stage-name">Interview</div>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-dot"></div>
+                            <div class="stage-name">Decision</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-card-footer">
+                    <span class="application-date">Applied on: Apr 10, 2025</span>
+                    <button class="btn btn-outline btn-sm">View Details</button>
+                </div>
+            </div>
+            
+            <div class="progress-card">
+                <div class="progress-card-header">
+                    <div class="progress-status in-review">In Review</div>
+                    <div class="company-logo small">
+                        <img src="/api/placeholder/48/48" alt="company logo">
+                    </div>
+                </div>
+                <div class="progress-card-body">
+                    <h3>UX Designer</h3>
+                    <p class="company-name">Creative Studios</p>
+                    <div class="progress-stages">
+                        <div class="stage completed">
+                            <div class="stage-dot"></div>
+                            <div class="stage-name">Applied</div>
+                        </div>
+                        <div class="stage completed">
+                            <div class="stage-dot"></div>
+                            <div class="stage-name">Review</div>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-dot"></div>
+                            <div class="stage-name">Interview</div>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-dot"></div>
+                            <div class="stage-name">Decision</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-card-footer">
+                    <span class="application-date">Applied on: Apr 5, 2025</span>
+                    <button class="btn btn-outline btn-sm">View Details</button>
+                </div>
+            </div>
+            
+            <div class="progress-card">
+                <div class="progress-card-header">
+                    <div class="progress-status interview">Interview</div>
+                    <div class="company-logo small">
+                        <img src="/api/placeholder/48/48" alt="company logo">
+                    </div>
+                </div>
+                <div class="progress-card-body">
+                    <h3>Marketing Assistant</h3>
+                    <p class="company-name">Global Brand Co.</p>
+                    <div class="progress-stages">
+                        <div class="stage completed">
+                            <div class="stage-dot"></div>
+                            <div class="stage-name">Applied</div>
+                        </div>
+                        <div class="stage completed">
+                            <div class="stage-dot"></div>
+                            <div class="stage-name">Review</div>
+                        </div>
+                        <div class="stage active">
+                            <div class="stage-dot"></div>
+                            <div class="stage-name">Interview</div>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-dot"></div>
+                            <div class="stage-name">Decision</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-card-footer">
+                    <span class="application-date">Interview on: Apr 15, 2025</span>
+                    <button class="btn btn-outline btn-sm">View Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Learning Resources -->
+    <div class="dashboard-section">
+        <div class="section-header">
+            <h2>Learning Resources</h2>
+            <a href="#" class="view-all">View All <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="resources-list">
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="resource-content">
+                    <h3>Resume Writing Tips</h3>
+                    <p>Learn how to create a standout resume that gets noticed by recruiters</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-clock"></i> 10 min read</span>
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                    </div>
+                </div>
+                <div class="resource-action">
+                    <button class="btn btn-outline btn-sm">Read Now</button>
+                </div>
+            </div>
+            
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="resource-content">
+                    <h3>Mastering Job Interviews</h3>
+                    <p>Video course on interview preparation, common questions, and techniques</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-clock"></i> 45 min</span>
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                </div>
+                <div class="resource-action">
+                    <button class="btn btn-outline btn-sm">Watch Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             <div id="page-dashboard" class="page active-page">
                 <!-- Content will be loaded dynamically with JavaScript -->
             </div>
@@ -116,6 +457,8 @@
     <button class="toggle-sidebar" id="toggle-sidebar">
         <i class="fas fa-bars"></i>
     </button>
+    <script src="script.js"></script>
+
     
     
 </body>

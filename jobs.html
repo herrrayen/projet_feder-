@@ -42,7 +42,7 @@
         <aside class="sidebar" id="sidebar">
             <div class="profile-summary">
                 <div class="profile-pic">
-                    <img src="C:\Users\HerrRayen\Desktop\projet federe\OpportuNet.png" alt="Profile" id="profile-avatar">
+                    <img src="/api/placeholder/100/100" alt="Profile" id="profile-avatar">
                 </div>
                 <h3 id="user-name">Guest User</h3>
                 <p id="user-title">Welcome!</p>
@@ -71,14 +71,351 @@
         <!-- Content -->
         <div class="content" id="main-content">
             <div id="page-jobs" class="page active-page">
-                <!-- Job listings will be loaded dynamically by script.js -->
+                <!-- Jobs Page Content -->
+                <div class="page-header">
+                    <h1>Find Jobs</h1>
+                    <div class="action-buttons">
+                        <button class="btn btn-outline" id="filter-btn">
+                            <i class="fas fa-filter"></i> Filter
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-sort"></i> Sort
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-bar">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="job-search" placeholder="Search for jobs, skills, or companies...">
+                        <button class="search-btn" id="clear-search">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <button class="btn btn-primary">Search</button>
+                </div>
+
+                <!-- Filters -->
+                <div class="filter-tags" id="active-filters">
+                    <div class="filter-tag">
+                        <span>Remote Only</span>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="filter-tag">
+                        <span>Full-time</span>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="filter-tag">
+                        <span>Posted: Last 24 hours</span>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <button class="clear-filters">Clear All</button>
+                </div>
+
+                <!-- Job Cards -->
+                <div class="jobs-container">
+                    <!-- Job Card 1 -->
+                    <div class="job-card">
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="/api/placeholder/60/60" alt="Tech Solutions Inc.">
+                            </div>
+                            <div class="job-card-title">
+                                <h3>Senior Full Stack Developer</h3>
+                                <div class="company-name">Tech Solutions Inc.</div>
+                                <div class="job-location">
+                                    <i class="fas fa-map-marker-alt"></i> Remote (Worldwide)
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <button class="save-btn" title="Save Job">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="share-btn" title="Share Job">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="job-card-body">
+                            <div class="job-tags">
+                                <span class="job-tag job-type">Full-time</span>
+                                <span class="job-tag">React</span>
+                                <span class="job-tag">Node.js</span>
+                                <span class="job-tag">MongoDB</span>
+                                <span class="job-tag">5+ Years</span>
+                            </div>
+                            <div class="job-description">
+                                Looking for an experienced Full Stack Developer with strong expertise in React and Node.js to join our remote team. You'll be working on building and maintaining scalable web applications...
+                            </div>
+                            <div class="job-meta">
+                                <span class="salary"><i class="fas fa-money-bill-wave"></i> $80K - $110K / year</span>
+                                <span class="post-date">Posted 2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="job-card-footer">
+                            <button class="btn btn-primary">Apply Now</button>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Job Card 2 -->
+                    <div class="job-card">
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="/api/placeholder/60/60" alt="Innovate Design">
+                            </div>
+                            <div class="job-card-title">
+                                <h3>UI/UX Designer</h3>
+                                <div class="company-name">Innovate Design</div>
+                                <div class="job-location">
+                                    <i class="fas fa-map-marker-alt"></i> New York, NY
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <button class="save-btn" title="Save Job">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="share-btn" title="Share Job">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="job-card-body">
+                            <div class="job-tags">
+                                <span class="job-tag job-type">Contract</span>
+                                <span class="job-tag">Figma</span>
+                                <span class="job-tag">Adobe XD</span>
+                                <span class="job-tag">UI Design</span>
+                                <span class="job-tag">3+ Years</span>
+                            </div>
+                            <div class="job-description">
+                                We are seeking a talented UI/UX Designer to create amazing user experiences. The ideal candidate should have a keen eye for clean design, possess superior UI knowledge, and be able to translate requirements into designs...
+                            </div>
+                            <div class="job-meta">
+                                <span class="salary"><i class="fas fa-money-bill-wave"></i> $45 - $60 / hour</span>
+                                <span class="post-date">Posted 5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="job-card-footer">
+                            <button class="btn btn-primary">Apply Now</button>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Job Card 3 -->
+                    <div class="job-card">
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="/api/placeholder/60/60" alt="DataTech Systems">
+                            </div>
+                            <div class="job-card-title">
+                                <h3>Data Scientist</h3>
+                                <div class="company-name">DataTech Systems</div>
+                                <div class="job-location">
+                                    <i class="fas fa-map-marker-alt"></i> Remote (US Only)
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <button class="save-btn" title="Save Job">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="share-btn" title="Share Job">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="job-card-body">
+                            <div class="job-tags">
+                                <span class="job-tag job-type">Full-time</span>
+                                <span class="job-tag">Python</span>
+                                <span class="job-tag">Machine Learning</span>
+                                <span class="job-tag">SQL</span>
+                                <span class="job-tag">2+ Years</span>
+                            </div>
+                            <div class="job-description">
+                                Join our growing team of data scientists to help extract insights from complex datasets. You'll be working with cutting-edge machine learning technologies to solve challenging business problems...
+                            </div>
+                            <div class="job-meta">
+                                <span class="salary"><i class="fas fa-money-bill-wave"></i> $95K - $120K / year</span>
+                                <span class="post-date">Posted yesterday</span>
+                            </div>
+                        </div>
+                        <div class="job-card-footer">
+                            <button class="btn btn-primary">Apply Now</button>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Job Card 4 -->
+                    <div class="job-card">
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="/api/placeholder/60/60" alt="Creative Studios">
+                            </div>
+                            <div class="job-card-title">
+                                <h3>Content Writer & SEO Specialist</h3>
+                                <div class="company-name">Creative Studios</div>
+                                <div class="job-location">
+                                    <i class="fas fa-map-marker-alt"></i> Chicago, IL (Hybrid)
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <button class="save-btn" title="Save Job">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="share-btn" title="Share Job">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="job-card-body">
+                            <div class="job-tags">
+                                <span class="job-tag job-type">Part-time</span>
+                                <span class="job-tag">SEO</span>
+                                <span class="job-tag">Content Writing</span>
+                                <span class="job-tag">WordPress</span>
+                                <span class="job-tag">1+ Year</span>
+                            </div>
+                            <div class="job-description">
+                                We're looking for a creative content writer with SEO knowledge to help grow our online presence. The ideal candidate will create engaging blog posts, website content, and marketing materials...
+                            </div>
+                            <div class="job-meta">
+                                <span class="salary"><i class="fas fa-money-bill-wave"></i> $25 - $35 / hour</span>
+                                <span class="post-date">Posted 3 days ago</span>
+                            </div>
+                        </div>
+                        <div class="job-card-footer">
+                            <button class="btn btn-primary">Apply Now</button>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="pagination-btn" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn">4</button>
+                    <button class="pagination-btn">5</button>
+                    <button class="pagination-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Job Details Modal -->
     <div class="modal-overlay" id="job-detail-modal">
-        <div class="modal"></div>
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Job Details</h2>
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <!-- Job details will be loaded here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Modal -->
+    <div class="modal-overlay" id="filter-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Filter Jobs</h2>
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="filter-section">
+                    <h3>Job Type</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="job-type" value="full-time"> Full-time
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="job-type" value="part-time"> Part-time
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="job-type" value="contract"> Contract
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="job-type" value="internship"> Internship
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h3>Location</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="location" value="remote"> Remote
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="location" value="on-site"> On-site
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="location" value="hybrid"> Hybrid
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h3>Experience Level</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="experience" value="entry"> Entry Level
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="experience" value="mid"> Mid Level
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="experience" value="senior"> Senior Level
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h3>Posted Date</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="date" value="24h"> Last 24 hours
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="date" value="week"> Last week
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="date" value="month"> Last month
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h3>Salary Range</h3>
+                    <div class="range-slider">
+                        <input type="range" min="0" max="200" value="50" id="salary-min">
+                        <input type="range" min="0" max="200" value="150" id="salary-max">
+                        <div class="slider-values">
+                            <span>$<span id="salary-min-value">50</span>K</span>
+                            <span>$<span id="salary-max-value">150</span>K</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button class="btn btn-outline">Reset</button>
+                    <button class="btn btn-primary">Apply Filters</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Toast container -->
@@ -88,5 +425,29 @@
     <button class="toggle-sidebar" id="toggle-sidebar">
         <i class="fas fa-bars"></i>
     </button>
+
+    <script>
+        // Simple event handlers for interactive elements
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.documentElement.setAttribute('data-theme', 
+                document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+        });
+        
+        document.getElementById('filter-btn').addEventListener('click', function() {
+            document.getElementById('filter-modal').classList.add('active');
+        });
+        
+        // Close modals when clicking the close button
+        document.querySelectorAll('.close-modal').forEach(function(button) {
+            button.addEventListener('click', function() {
+                this.closest('.modal-overlay').classList.remove('active');
+            });
+        });
+        
+        // Mobile sidebar toggle
+        document.getElementById('toggle-sidebar').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
