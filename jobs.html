@@ -42,7 +42,7 @@
         <aside class="sidebar" id="sidebar">
             <div class="profile-summary">
                 <div class="profile-pic">
-                    <img src="/api/placeholder/100/100" alt="Profile" id="profile-avatar">
+                    <img src="C:\Users\HerrRayen\Desktop\projet federe\OpportuNet.png" alt="Profile" id="profile-avatar">
                 </div>
                 <h3 id="user-name">Guest User</h3>
                 <p id="user-title">Welcome!</p>
@@ -426,28 +426,6 @@
         <i class="fas fa-bars"></i>
     </button>
 
-    <script>
-        // Simple event handlers for interactive elements
-        document.getElementById('theme-toggle').addEventListener('click', function() {
-            document.documentElement.setAttribute('data-theme', 
-                document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
-        });
-        
-        document.getElementById('filter-btn').addEventListener('click', function() {
-            document.getElementById('filter-modal').classList.add('active');
-        });
-        
-        // Close modals when clicking the close button
-        document.querySelectorAll('.close-modal').forEach(function(button) {
-            button.addEventListener('click', function() {
-                this.closest('.modal-overlay').classList.remove('active');
-            });
-        });
-        
-        // Mobile sidebar toggle
-        document.getElementById('toggle-sidebar').addEventListener('click', function() {
-            document.getElementById('sidebar').classList.toggle('active');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

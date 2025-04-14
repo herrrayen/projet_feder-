@@ -1,11 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // Theme toggle
-    const themeToggle = document.getElementById('theme-toggle');
     themeToggle.addEventListener('click', () => {
-        document.documentElement.dataset.theme = 
-            document.documentElement.dataset.theme === "light" ? "dark" : "light";
-    });
+    const html = document.documentElement;
+    html.dataset.theme = html.dataset.theme === "light" ? "dark" : "light";
+    localStorage.setItem('theme', html.dataset.theme);
+});
+
+// On page load, apply saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    document.documentElement.dataset.theme = savedTheme;
+}
+
 
     // Sidebar mobile toggle
     const sidebarToggle = document.getElementById('toggle-sidebar');
