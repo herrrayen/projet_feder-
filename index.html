@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance & Internship Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-briefcase"></i>
+            <span>Freelance & Internship Hub</span>
+        </div>
+        <div class="top-nav">
+            <a href="index.html" class="active"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="jobs.html"><i class="fas fa-search"></i> Find Jobs</a>
+            <a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a>
+            <a href="messages.html"><i class="fas fa-comment"></i> Messages</a>
+        </div>
+        <div class="user-menu">
+            <div class="notifications-dropdown" id="notifications">
+                <div class="notifications-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notifications-count">3</span>
+                </div>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="auth-buttons">
+                <button class="login-btn" id="login-btn">Log In</button>
+                <button class="signup-btn" id="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="profile-summary">
+                <div class="profile-pic">
+                    <img src="C:\Users\HerrRayen\Desktop\projet federe\OpportuNet.png" alt="Profile" id="profile-avatar">
+                </div>
+                <h3 id="user-name">Guest User</h3>
+                <p id="user-title">Welcome!</p>
+            </div>
+            
+            <div class="sidebar-menu">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="jobs.html"><i class="fas fa-search"></i> Find Jobs</a></li>
+                    <li><a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a></li>
+                    <li><a href="saved.html"><i class="fas fa-heart"></i> Saved Jobs</a></li>
+                    <li><a href="messages.html"><i class="fas fa-comment"></i> Messages</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </div>
+            
+            <div class="premium-banner">
+                <h4>Upgrade to Premium</h4>
+                <p>Get access to advanced features!</p>
+                <button class="btn btn-primary btn-sm">Upgrade Now</button>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <div class="content" id="main-content">
+            <!-- Dashboard page content will go here -->
+            <div id="page-dashboard" class="page active-page">
+                <!-- Content will be loaded dynamically with JavaScript -->
+            </div>
+            
+            <!-- Jobs page content -->
+            <div id="page-jobs" class="page">
+                <!-- Content will be loaded dynamically with JavaScript -->
+            </div>
+            
+            <!-- Profile page content -->
+            <div id="page-profile" class="page">
+                <!-- Content will be loaded dynamically with JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modals -->
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal">
+            <!-- Login form will be inserted here -->
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="signup-modal">
+        <div class="modal">
+            <!-- Signup form will be inserted here -->
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="job-detail-modal">
+        <div class="modal">
+            <!-- Job details will be inserted here -->
+        </div>
+    </div>
+    
+    <!-- Toast container for notifications -->
+    <div class="toast-container" id="toast-container">
+        <!-- Toasts will be inserted here -->
+    </div>
+    
+    <!-- Mobile navigation toggle button -->
+    <button class="toggle-sidebar" id="toggle-sidebar">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Freelance & Internship Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-briefcase"></i>
+            <span>Freelance & Internship Hub</span>
+        </div>
+        <div class="top-nav">
+            <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="jobs.html"><i class="fas fa-search"></i> Find Jobs</a>
+            <a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a>
+            <a href="messages.html"><i class="fas fa-comment"></i> Messages</a>
+        </div>
+        <div class="user-menu">
+            <div class="notifications-dropdown" id="notifications">
+                <div class="notifications-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notifications-count">3</span>
+                </div>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="auth-buttons">
+                <button class="login-btn" id="login-btn">Log In</button>
+                <button class="signup-btn" id="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="profile-summary">
+                <div class="profile-pic">
+                    <img src="C:\Users\HerrRayen\Desktop\projet federe\OpportuNet.png" alt="Profile" id="profile-avatar">
+                </div>
+                <h3 id="user-name">Guest User</h3>
+                <p id="user-title">Welcome!</p>
+            </div>
+            
+            <div class="sidebar-menu">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="jobs.html"><i class="fas fa-search"></i> Find Jobs</a></li>
+                    <li><a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a></li>
+                    <li><a href="saved.html"><i class="fas fa-heart"></i> Saved Jobs</a></li>
+                    <li><a href="messages.html"><i class="fas fa-comment"></i> Messages</a></li>
+                    <li><a href="profile.html" class="active"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </div>
+            
+            <div class="premium-banner">
+                <h4>Upgrade to Premium</h4>
+                <p>Get access to advanced features!</p>
+                <button class="btn btn-primary btn-sm">Upgrade Now</button>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <div class="content" id="main-content">
+            <div id="page-profile" class="page active-page">
+                <div class="page-header">
+                    <h1>My Profile</h1>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="edit-profile-btn">
+                            <i class="fas fa-edit"></i> Edit Profile
+                        </button>
+                        <button class="btn btn-outline" id="download-cv-btn">
+                            <i class="fas fa-download"></i> Download CV
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Profile Overview -->
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="profile-image-large">
+                            <img src="C:\Users\HerrRayen\Desktop\projet federe\OpportuNet.png" alt="Profile Picture" id="large-profile-pic">
+                            <div class="change-photo-overlay" id="change-photo-btn">
+                                <i class="fas fa-camera"></i>
+                                <span>Change Photo</span>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h2 id="profile-name">John Doe</h2>
+                            <p id="profile-title">UX/UI Designer & Front-end Developer</p>
+                            <p id="profile-location"><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+                            
+                            <div class="profile-stats">
+                                <div class="stat">
+                                    <span class="stat-value">27</span>
+                                    <span class="stat-label">Applications</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">5</span>
+                                    <span class="stat-label">Interviews</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">15</span>
+                                    <span class="stat-label">Saved Jobs</span>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-completion">
+                                <div class="completion-bar">
+                                    <div class="completion-progress" style="width: 85%;"></div>
+                                </div>
+                                <p>Profile Completion: <strong>85%</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Details Tabs -->
+                <div class="tabs-container">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="about">About</button>
+                        <button class="tab-btn" data-tab="skills">Skills</button>
+                        <button class="tab-btn" data-tab="experience">Experience</button>
+                        <button class="tab-btn" data-tab="education">Education</button>
+                        <button class="tab-btn" data-tab="portfolio">Portfolio</button>
+                    </div>
+                    
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+                        <!-- About Tab -->
+                        <div class="tab-pane active" id="about-tab">
+                            <div class="section">
+                                <h3>About Me</h3>
+                                <p>I'm a passionate UX/UI Designer and Front-end Developer with 5+ years of experience creating user-centered digital experiences. I specialize in translating complex requirements into simple, intuitive designs that help businesses achieve their goals.</p>
+                                <p>My approach combines creative design thinking with technical expertise to build accessible, responsive, and visually appealing websites and applications.</p>
+                            </div>
+                            
+                            <div class="section">
+                                <h3>Contact Information</h3>
+                                <ul class="contact-info">
+                                    <li><i class="fas fa-envelope"></i> john.doe@example.com</li>
+                                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                                    <li><i class="fas fa-globe"></i> www.johndoeportfolio.com</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="section">
+                                <h3>Social Profiles</h3>
+                                <div class="social-links">
+                                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                                    <a href="#" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+                                    <a href="#" class="social-link"><i class="fab fa-dribbble"></i> Dribbble</a>
+                                    <a href="#" class="social-link"><i class="fab fa-behance"></i> Behance</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skills Tab -->
+                        <div class="tab-pane" id="skills-tab">
+                            <div class="section">
+                                <h3>Technical Skills</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span>HTML/CSS</span>
+                                            <span>95%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 95%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span>JavaScript</span>
+                                            <span>85%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 85%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span>UI Design</span>
+                                            <span>90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 90%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span>UX Research</span>
+                                            <span>80%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 80%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span>React.js</span>
+                                            <span>75%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" style="width: 75%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="section">
+                                <h3>Soft Skills</h3>
+                                <div class="tag-cloud">
+                                    <span class="tag">Communication</span>
+                                    <span class="tag">Problem Solving</span>
+                                    <span class="tag">Teamwork</span>
+                                    <span class="tag">Client Management</span>
+                                    <span class="tag">Time Management</span>
+                                    <span class="tag">Adaptability</span>
+                                    <span class="tag">Creativity</span>
+                                    <span class="tag">Critical Thinking</span>
+                                </div>
+                            </div>
+                            
+                            <div class="section">
+                                <h3>Tools & Software</h3>
+                                <div class="tools-grid">
+                                    <div class="tool-item">
+                                        <i class="fab fa-figma"></i>
+                                        <span>Figma</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="fab fa-adobe"></i>
+                                        <span>Adobe XD</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="fab fa-sketch"></i>
+                                        <span>Sketch</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="fab fa-github"></i>
+                                        <span>Git/GitHub</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="fab fa-npm"></i>
+                                        <span>npm</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="fab fa-sass"></i>
+                                        <span>Sass</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Experience Tab -->
+                        <div class="tab-pane" id="experience-tab">
+                            <div class="section">
+                                <h3>Work Experience</h3>
+                                
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-header">
+                                                <h4>Senior UX/UI Designer</h4>
+                                                <span class="company">TechSolutions Inc.</span>
+                                                <span class="date">Jan 2022 - Present</span>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Leading the design of enterprise SaaS applications, working closely with product managers and developers to create intuitive user experiences. Conducting user research, creating wireframes, prototypes, and implementing designs using modern front-end technologies.</p>
+                                                <ul class="achievement-list">
+                                                    <li>Redesigned core product dashboard, increasing user engagement by 35%</li>
+                                                    <li>Implemented design system that improved development efficiency by 40%</li>
+                                                    <li>Mentored junior designers and facilitated design thinking workshops</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-header">
+                                                <h4>UX Designer</h4>
+                                                <span class="company">Digital Craft Agency</span>
+                                                <span class="date">Mar 2019 - Dec 2021</span>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Designed user interfaces for web and mobile applications across various industries. Created user flows, wireframes, and interactive prototypes. Collaborated with clients to understand requirements and implemented responsive designs.</p>
+                                                <ul class="achievement-list">
+                                                    <li>Successfully delivered 25+ design projects for clients in finance, healthcare, and e-commerce</li>
+                                                    <li>Improved client conversion rates by an average of 25% through UX improvements</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-header">
+                                                <h4>Front-end Developer</h4>
+                                                <span class="company">WebCreate Studio</span>
+                                                <span class="date">Jun 2017 - Feb 2019</span>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Developed responsive websites and web applications using HTML, CSS, and JavaScript. Worked with designers to implement pixel-perfect UI/UX designs and optimize website performance.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Education Tab -->
+                        <div class="tab-pane" id="education-tab">
+                            <div class="section">
+                                <h3>Education</h3>
+                                
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-header">
+                                                <h4>Master of Fine Arts, Interactive Design</h4>
+                                                <span class="institution">Design Institute of Technology</span>
+                                                <span class="date">2015 - 2017</span>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Specialized in user experience design and interactive media. Thesis focused on improving accessibility in digital interfaces for users with cognitive disabilities.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-header">
+                                                <h4>Bachelor of Science, Computer Science</h4>
+                                                <span class="institution">State University</span>
+                                                <span class="date">2011 - 2015</span>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Focused on software development and human-computer interaction. Minor in Graphic Design.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="section">
+                                <h3>Certifications</h3>
+                                <div class="certifications-grid">
+                                    <div class="certification-item">
+                                        <i class="fas fa-certificate"></i>
+                                        <div class="certification-info">
+                                            <h4>Google UX Design Professional Certificate</h4>
+                                            <p>Google, 2022</p>
+                                        </div>
+                                    </div>
+                                    <div class="certification-item">
+                                        <i class="fas fa-certificate"></i>
+                                        <div class="certification-info">
+                                            <h4>Frontend Web Developer Nanodegree</h4>
+                                            <p>Udacity, 2020</p>
+                                        </div>
+                                    </div>
+                                    <div class="certification-item">
+                                        <i class="fas fa-certificate"></i>
+                                        <div class="certification-info">
+                                            <h4>Certified Scrum Product Owner (CSPO)</h4>
+                                            <p>Scrum Alliance, 2021</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Portfolio Tab -->
+                        <div class="tab-pane" id="portfolio-tab">
+                            <div class="section">
+                                <h3>Portfolio</h3>
+                                <p class="portfolio-intro">Selected projects showcasing my design and development work.</p>
+                                
+                                <div class="portfolio-grid">
+                                    <div class="portfolio-item">
+                                        <div class="portfolio-image">
+                                            <img src="/api/placeholder/400/300" alt="E-commerce Redesign">
+                                            <div class="portfolio-overlay">
+                                                <div class="portfolio-actions">
+                                                    <a href="#" class="portfolio-action"><i class="fas fa-link"></i></a>
+                                                    <a href="#" class="portfolio-action"><i class="fas fa-search-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-info">
+                                            <h4>E-commerce Redesign</h4>
+                                            <p>UI/UX Design, Front-end Development</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="portfolio-item">
+                                        <div class="portfolio-image">
+                                            <img src="/api/placeholder/400/300" alt="Banking Mobile App">
+                                            <div class="portfolio-overlay">
+                                                <div class="portfolio-actions">
+                                                    <a href="#" class="portfolio-action"><i class="fas fa-link"></i></a>
+                                                    <a href="#" class="portfolio-action"><i class="fas fa-search-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-info">
+                                            <h4>Banking Mobile App</h4>
+                                            <p>UI Design, Prototyping</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="portfolio-item">
+                                        <div class="portfolio-image">
+                                            <img src="/api/placeholder/400/300" alt="Travel Blog Website">
+                                            <div class="portfolio-overlay">
+                                                <div class="portfolio-actions">
+                                                    <a href="#" class="portfolio-action"><i class="fas fa-link"></i></a>
+                                                    <a href="#" class="portfolio-action"><i class="fas fa-search-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-info">
+                                            <h4>Travel Blog Website</h4>
+                                            <p>Web Design, Development</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="portfolio-item">
+                                        <div class="portfolio-image">
+                                            <img src="/api/placeholder/400/300" alt="Health Tracker Dashboard">
+                                            <div class="portfolio-overlay">
+                                                <div class="portfolio-actions">
+                                                    <a href="#" class="portfolio-action"><i class="fas fa-link"></i></a>
+                                                    <a href="#" class="portfolio-action"><i class="fas fa-search-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-info">
+                                            <h4>Health Tracker Dashboard</h4>
+                                            <p>UI Design, Data Visualization</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="view-more">
+                                    <button class="btn btn-outline">View All Projects</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit Profile Modal -->
+    <div class="modal-overlay" id="edit-profile-modal">
+        <div class="modal modal-large">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="profile-edit-form">
+                    <div class="form-section">
+                        <h3>Basic Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="edit-name">Full Name</label>
+                                <input type="text" id="edit-name" name="name" value="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-title">Professional Title</label>
+                                <input type="text" id="edit-title" name="title" value="UX/UI Designer & Front-end Developer">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="edit-email">Email</label>
+                                <input type="email" id="edit-email" name="email" value="john.doe@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-phone">Phone</label>
+                                <input type="tel" id="edit-phone" name="phone" value="+1 (555) 123-4567">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="edit-location">Location</label>
+                                <input type="text" id="edit-location" name="location" value="New York, USA">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-website">Website</label>
+                                <input type="url" id="edit-website" name="website" value="www.johndoeportfolio.com">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>About Me</h3>
+                        <div class="form-group">
+                            <label for="edit-about">Bio</label>
+                            <textarea id="edit-about" name="about" rows="5">I'm a passionate UX/UI Designer and Front-end Developer with 5+ years of experience creating user-centered digital experiences. I specialize in translating complex requirements into simple, intuitive designs that help businesses achieve their goals.
+
+My approach combines creative design thinking with technical expertise to build accessible, responsive, and visually appealing websites and applications.</textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Social Profiles</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="edit-linkedin">LinkedIn</label>
+                                <div class="input-with-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                    <input type="url" id="edit-linkedin" name="linkedin" value="https://linkedin.com/in/johndoe">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-github">GitHub</label>
+                                <div class="input-with-icon">
+                                    <i class="fab fa-github"></i>
+                                    <input type="url" id="edit-github" name="github" value="https://github.com/johndoe">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="edit-dribbble">Dribbble</label>
+                                <div class="input-with-icon">
+                                    <i class="fab fa-dribbble"></i>
+                                    <input type="url" id="edit-dribbble" name="dribbble" value="https://dribbble.com/johndoe">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-behance">Behance</label>
+                                <div class="input-with-icon">
+                                    <i class="fab fa-behance"></i>
+                                    <input type="url" id="edit-behance" name="behance" value="https://behance.net/johndoe">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" id="cancel-edit">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast container for notifications -->
+    <div class="toast-container" id="toast-container">
+        <!-- Toasts will be inserted here -->
+    </div>
+    
+    <!-- Mobile navigation toggle button -->
+    <button class="toggle-sidebar" id="toggle-sidebar">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    

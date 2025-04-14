@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Freelance & Internship Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-briefcase"></i>
+            <span>Freelance & Internship Hub</span>
+        </div>
+        <div class="top-nav">
+            <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="jobs.html"><i class="fas fa-search"></i> Find Jobs</a>
+            <a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a>
+            <a href="messages.html" class="active"><i class="fas fa-comment"></i> Messages</a>
+        </div>
+        <div class="user-menu">
+            <div class="notifications-dropdown" id="notifications">
+                <div class="notifications-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notifications-count">3</span>
+                </div>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="auth-buttons">
+                <button class="login-btn" id="login-btn">Log In</button>
+                <button class="signup-btn" id="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="profile-summary">
+                <div class="profile-pic">
+                    <img src="C:\Users\HerrRayen\Desktop\projet federe\OpportuNet.png" alt="Profile" id="profile-avatar">
+                </div>
+                <h3 id="user-name">Guest User</h3>
+                <p id="user-title">Welcome!</p>
+            </div>
+            
+            <div class="sidebar-menu">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="jobs.html"><i class="fas fa-search"></i> Find Jobs</a></li>
+                    <li><a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a></li>
+                    <li><a href="saved.html"><i class="fas fa-heart"></i> Saved Jobs</a></li>
+                    <li><a href="messages.html" class="active"><i class="fas fa-comment"></i> Messages</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </div>
+            
+            <div class="premium-banner">
+                <h4>Upgrade to Premium</h4>
+                <p>Get access to advanced features!</p>
+                <button class="btn btn-primary btn-sm">Upgrade Now</button>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <div class="content" id="main-content">
+            <div id="page-messages" class="page active-page">
+                <div class="page-header">
+                    <h1>Messages</h1>
+                    <div class="action-buttons">
+                        <button class="btn btn-outline">
+                            <i class="fas fa-filter"></i> Filter
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> New Message
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Messages Container -->
+                <div class="messages-container">
+                    <!-- Messages Sidebar -->
+                    <div class="messages-sidebar">
+                        <div class="messages-search">
+                            <div class="search-input">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search messages...">
+                            </div>
+                        </div>
+                        
+                        <div class="messages-tabs">
+                            <button class="message-tab active">All</button>
+                            <button class="message-tab">Unread</button>
+                            <button class="message-tab">Archived</button>
+                        </div>
+                        
+                        <div class="message-contacts">
+                            <!-- Contact 1 - Active -->
+                            <div class="message-contact active">
+                                <div class="contact-avatar">
+                                    <img src="/api/placeholder/40/40" alt="Tech Solutions">
+                                    <span class="status-indicator online"></span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-header">
+                                        <h4>Tech Solutions Inc.</h4>
+                                        <span class="message-time">10:30 AM</span>
+                                    </div>
+                                    <div class="contact-preview">
+                                        <p>We'd like to schedule an interview for the UX Designer position...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Contact 2 - Unread -->
+                            <div class="message-contact unread">
+                                <div class="contact-avatar">
+                                    <img src="/api/placeholder/40/40" alt="Digital Agency">
+                                    <span class="status-indicator away"></span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-header">
+                                        <h4>Digital Craft Agency</h4>
+                                        <span class="message-time">Yesterday</span>
+                                    </div>
+                                    <div class="contact-preview">
+                                        <p>Thank you for your application. Your portfolio stands out from...</p>
+                                        <span class="unread-badge">2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Contact 3 -->
+                            <div class="message-contact">
+                                <div class="contact-avatar">
+                                    <img src="/api/placeholder/40/40" alt="InnoTech">
+                                    <span class="status-indicator offline"></span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-header">
+                                        <h4>InnoTech Startups</h4>
+                                        <span class="message-time">Apr 9</span>
+                                    </div>
+                                    <div class="contact-preview">
+                                        <p>We've reviewed your application and would like to invite you...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Contact 4 -->
+                            <div class="message-contact">
+                                <div class="contact-avatar">
+                                    <img src="/api/placeholder/40/40" alt="Creative Studio">
+                                    <span class="status-indicator online"></span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-header">
+                                        <h4>Creative Studio</h4>
+                                        <span class="message-time">Apr 8</span>
+                                    </div>
+                                    <div class="contact-preview">
+                                        <p>Hi John, I wanted to follow up on our conversation about the freelance project...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Contact 5 -->
+                            <div class="message-contact">
+                                <div class="contact-avatar">
+                                    <img src="/api/placeholder/40/40" alt="Web Solutions">
+                                    <span class="status-indicator offline"></span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-header">
+                                        <h4>WebCreate Solutions</h4>
+                                        <span class="message-time">Apr 5</span>
+                                    </div>
+                                    <div class="contact-preview">
+                                        <p>We're currently looking for a front-end developer to join our team...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Contact 6 -->
+                            <div class="message-contact">
+                                <div class="contact-avatar">
+                                    <img src="/api/placeholder/40/40" alt="Design Lab">
+                                    <span class="status-indicator away"></span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-header">
+                                        <h4>Design Lab</h4>
+                                        <span class="message-time">Mar 30</span>
+                                    </div>
+                                    <div class="contact-preview">
+                                        <p>Your application for the UX Research internship has been received...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Message Chat Area -->
+                    <div class="message-chat">
+                        <div class="chat-header">
+                            <div class="chat-contact">
+                                <div class="contact-avatar">
+                                    <img src="/api/placeholder/40/40" alt="Tech Solutions">
+                                    <span class="status-indicator online"></span>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Tech Solutions Inc.</h3>
+                                    <span class="status-text">Online</span>
+                                </div>
+                            </div>
+                            <div class="chat-actions">
+                                <button class="btn btn-icon" title="Video call">
+                                    <i class="fas fa-video"></i>
+                                </button>
+                                <button class="btn btn-icon" title="Voice call">
+                                    <i class="fas fa-phone"></i>
+                                </button>
+                                <button class="btn btn-icon" title="More options">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-body">
+                            <div class="chat-date-divider">
+                                <span>Today, April 11, 2025</span>
+                            </div>
+                            
+                            <!-- Received Message -->
+                            <div class="message received">
+                                <div class="message-avatar">
+                                    <img src="/api/placeholder/40/40" alt="Tech Solutions">
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-bubble">
+                                        <p>Hello John, this is Sarah from Tech Solutions Inc. We've reviewed your application for the UX Designer position and were impressed with your portfolio.</p>
+                                    </div>
+                                    <div class="message-time">10:05 AM</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Received Message -->
+                            <div class="message received">
+                                <div class="message-avatar">
+                                    <img src="/api/placeholder/40/40" alt="Tech Solutions">
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-bubble">
+                                        <p>We'd like to schedule an interview with you next week. Would you be available either Tuesday or Wednesday afternoon?</p>
+                                    </div>
+                                    <div class="message-time">10:07 AM</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Sent Message -->
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <div class="message-bubble">
+                                        <p>Hi Sarah, thanks for reaching out! I'm definitely interested in discussing the position further.</p>
+                                    </div>
+                                    <div class="message-time">10:15 AM</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Sent Message -->
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <div class="message-bubble">
+                                        <p>Wednesday afternoon would work perfectly for me. I'm available anytime after 1:00 PM. Does that work for your team?</p>
+                                    </div>
+                                    <div class="message-time">10:16 AM</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Received Message -->
+                            <div class="message received">
+                                <div class="message-avatar">
+                                    <img src="/api/placeholder/40/40" alt="Tech Solutions">
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-bubble">
+                                        <p>Great! Let's schedule the interview for Wednesday at 2:00 PM. It will be a video call with our design team and the product manager.</p>
+                                    </div>
+                                    <div class="message-time">10:30 AM</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Received Message with Attachment -->
+                            <div class="message received">
+                                <div class="message-avatar">
+                                    <img src="/api/placeholder/40/40" alt="Tech Solutions">
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-bubble">
+                                        <p>I've attached some information about our company and the UX team you'll be meeting with. Please let me know if you have any questions before the interview.</p>
+                                        <div class="message-attachment">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <div class="attachment-info">
+                                                <span class="attachment-name">TechSolutions_Company_Info.pdf</span>
+                                                <span class="attachment-size">2.4 MB</span>
+                                            </div>
+                                            <button class="attachment-download">
+                                                <i class="fas fa-download"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="message-time">10:32 AM</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-composer">
+                            <button class="composer-btn" title="Attach file">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <div class="composer-input">
+                                <input type="text" placeholder="Type a message...">
+                            </div>
+                            <button class="composer-btn" title="Insert emoji">
+                                <i class="far fa-smile"></i>
+                            </button>
+                            <button class="send-message-btn" title="Send message">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Message Details Sidebar -->
+                    <div class="message-details">
+                        <div class="details-header">
+                            <h3>Contact Details</h3>
+                            <button class="btn btn-icon close-details">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="contact-profile">
+                            <div class="profile-image">
+                                <img src="/api/placeholder/80/80" alt="Tech Solutions">
+                            </div>
+                            <h4>Tech Solutions Inc.</h4>
+                            <p class="company-title">Software Development Company</p>
+                            <div class="profile-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-user-plus"></i> Connect
+                                </button>
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-star"></i> Save
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-section">
+                            <h5>Company Information</h5>
+                            <ul class="contact-info-list">
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>San Francisco, CA</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-globe"></i>
+                                    <span>www.techsolutions.com</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-users"></i>
+                                    <span>50-100 employees</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-building"></i>
+                                    <span>Technology</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="contact-info-section">
+                            <h5>Contact Person</h5>
+                            <div class="contact-person">
+                                <div class="person-avatar">
+                                    <img src="/api/placeholder/40/40" alt="Sarah Johnson">
+                                </div>
+                                <div class="person-info">
+                                    <h6>Sarah Johnson</h6>
+                                    <p>HR Manager</p>
+                                    <span class="person-email">sarah.j@techsolutions.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="shared-files">
+                            <h5>Shared Files</h5>
+                            <ul class="files-list">
+                                <li class="file-item">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <div class="file-info">
+                                        <span class="file-name">TechSolutions_Company_Info.pdf</span>
+                                        <span class="file-date">Today, 10:32 AM</span>
+                                    </div>
+                                    <button class="file-download">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </li>
+                                <li class="file-item">
+                                    <i class="fas fa-file-word"></i>
+                                    <div class="file-info">
+                                        <span class="file-name">Job_Description.docx</span>
+                                        <span class="file-date">Apr 5, 2025</span>
+                                    </div>
+                                    <button class="file-download">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </li>
+                                <li class="file-item">
+                                    <i class="fas fa-file-image"></i>
+                                    <div class="file-info">
+                                        <span class="file-name">Office_Photo.jpg</span>
+                                        <span class="file-date">Apr 1, 2025</span>
+                                    </div>
+                                    <button class="file-download">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="related-jobs">
+                            <h5>Related Job Postings</h5>
+                            <div class="related-job-item">
+                                <h6>UX Designer</h6>
+                                <p class="job-location"><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-time</p>
+                                <a href="#" class="view-job-link">View Job</a>
+                            </div>
+                            <div class="related-job-item">
+                                <h6>Frontend Developer</h6>
+                                <p class="job-location"><i class="fas fa-map-marker-alt"></i> Remote</p>
+                                <p class="job-type"><i class="fas fa-briefcase"></i> Full-time</p>
+                                <a href="#" class="view-job-link">View Job</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile navigation toggle button -->
+    <button class="toggle-sidebar" id="toggle-sidebar">
+        <i class="fas fa-bars"></i>
+    </button>
+</body>
+</html>

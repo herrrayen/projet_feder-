@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Freelance & Internship Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-briefcase"></i>
+            <span>Freelance & Internship Hub</span>
+        </div>
+        <div class="top-nav">
+            <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="jobs.html"><i class="fas fa-search"></i> Find Jobs</a>
+            <a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a>
+            <a href="messages.html"><i class="fas fa-comment"></i> Messages</a>
+        </div>
+        <div class="user-menu">
+            <div class="notifications-dropdown" id="notifications">
+                <div class="notifications-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notifications-count">3</span>
+                </div>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="auth-buttons">
+                <button class="login-btn" id="login-btn">Log In</button>
+                <button class="signup-btn" id="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="profile-summary">
+                <div class="profile-pic">
+                    <img src="C:\Users\HerrRayen\Desktop\projet federe\OpportuNet.png" alt="Profile" id="profile-avatar">
+                </div>
+                <h3 id="user-name">Guest User</h3>
+                <p id="user-title">Welcome!</p>
+            </div>
+            
+            <div class="sidebar-menu">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="jobs.html"><i class="fas fa-search"></i> Find Jobs</a></li>
+                    <li><a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a></li>
+                    <li><a href="saved.html"><i class="fas fa-heart"></i> Saved Jobs</a></li>
+                    <li><a href="messages.html"><i class="fas fa-comment"></i> Messages</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </div>
+            
+            <div class="premium-banner">
+                <h4>Upgrade to Premium</h4>
+                <p>Get access to advanced features!</p>
+                <button class="btn btn-primary btn-sm">Upgrade Now</button>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <div class="content" id="main-content">
+            <div id="page-settings" class="page active-page">
+                <div class="page-header">
+                    <h1>Settings</h1>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="save-settings-btn">
+                            <i class="fas fa-save"></i> Save Changes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Settings Navigation -->
+                <div class="settings-container">
+                    <div class="settings-nav">
+                        <ul>
+                            <li class="active"><a href="#account-settings"><i class="fas fa-user-circle"></i> Account</a></li>
+                            <li><a href="#privacy-settings"><i class="fas fa-shield-alt"></i> Privacy</a></li>
+                            <li><a href="#notification-settings"><i class="fas fa-bell"></i> Notifications</a></li>
+                            <li><a href="#appearance-settings"><i class="fas fa-paint-brush"></i> Appearance</a></li>
+                            <li><a href="#subscription-settings"><i class="fas fa-credit-card"></i> Subscription</a></li>
+                            <li><a href="#security-settings"><i class="fas fa-lock"></i> Security</a></li>
+                            <li><a href="#job-preferences"><i class="fas fa-briefcase"></i> Job Preferences</a></li>
+                            <li><a href="#connected-accounts"><i class="fas fa-link"></i> Connected Accounts</a></li>
+                            <li class="settings-nav-divider"></li>
+                            <li><a href="#help-support" class="text-normal"><i class="fas fa-question-circle"></i> Help & Support</a></li>
+                            <li><a href="#delete-account" class="text-danger"><i class="fas fa-trash-alt"></i> Delete Account</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="settings-content">
+                        <!-- Account Settings -->
+                        <div class="settings-section active" id="account-settings">
+                            <h2>Account Settings</h2>
+                            <p class="settings-description">Manage your account information and preferences.</p>
+                            
+                            <form id="account-form">
+                                <div class="form-section">
+                                    <h3>Basic Information</h3>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="first-name">First Name</label>
+                                            <input type="text" id="first-name" name="first-name" value="John">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="last-name">Last Name</label>
+                                            <input type="text" id="last-name" name="last-name" value="Doe">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="display-name">Display Name</label>
+                                            <input type="text" id="display-name" name="display-name" value="John Doe">
+                                            <small class="form-help">This is how your name will appear on the platform</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="user-title">Professional Title</label>
+                                            <input type="text" id="user-title" name="user-title" value="UX/UI Designer & Front-end Developer">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h3>Contact Information</h3>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="email">Email Address</label>
+                                            <input type="email" id="email" name="email" value="john.doe@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="tel" id="phone" name="phone" value="+1 (555) 123-4567">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="location">Location</label>
+                                            <input type="text" id="location" name="location" value="New York, USA">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="timezone">Timezone</label>
+                                            <select id="timezone" name="timezone">
+                                                <option value="utc-8">Pacific Time (UTC-8)</option>
+                                                <option value="utc-7">Mountain Time (UTC-7)</option>
+                                                <option value="utc-6">Central Time (UTC-6)</option>
+                                                <option value="utc-5" selected>Eastern Time (UTC-5)</option>
+                                                <option value="utc+0">GMT (UTC+0)</option>
+                                                <option value="utc+1">Central European Time (UTC+1)</option>
+                                                <option value="utc+2">Eastern European Time (UTC+2)</option>
+                                                <option value="utc+3">Moscow Time (UTC+3)</option>
+                                                <option value="utc+5:30">Indian Standard Time (UTC+5:30)</option>
+                                                <option value="utc+8">China Standard Time (UTC+8)</option>
+                                                <option value="utc+9">Japan Standard Time (UTC+9)</option>
+                                                <option value="utc+10">Australian Eastern Time (UTC+10)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h3>Language & Regional Settings</h3>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="language">Language</label>
+                                            <select id="language" name="language">
+                                                <option value="en" selected>English</option>
+                                                <option value="es">Español</option>
+                                                <option value="fr">Français</option>
+                                                <option value="de">Deutsch</option>
+                                                <option value="pt">Português</option>
+                                                <option value="zh">中文</option>
+                                                <option value="ja">日本語</option>
+                                                <option value="ar">العربية</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="date-format">Date Format</label>
+                                            <select id="date-format" name="date-format">
+                                                <option value="mm-dd-yyyy" selected>MM/DD/YYYY</option>
+                                                <option value="dd-mm-yyyy">DD/MM/YYYY</option>
+                                                <option value="yyyy-mm-dd">YYYY/MM/DD</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Privacy Settings -->
+                        <div class="settings-section" id="privacy-settings">
+                            <h2>Privacy Settings</h2>
+                            <p class="settings-description">Control your privacy and visibility settings.</p>
+                            
+                            <form id="privacy-form">
+                                <div class="form-section">
+                                    <h3>Profile Visibility</h3>
+                                    <div class="form-group">
+                                        <label>Who can view your profile?</label>
+                                        <div class="radio-group">
+                                            <div class="radio-option">
+                                                <input type="radio" id="visibility-everyone" name="profile-visibility" value="everyone" checked>
+                                                <label for="visibility-everyone">Everyone</label>
+                                                <p class="option-description">Your profile is visible to all users and employers.</p>
+                                            </div>
+                                            <div class="radio-option">
+                                                <input type="radio" id="visibility-connections" name="profile-visibility" value="connections">
+                                                <label for="visibility-connections">Only Connections</label>
+                                                <p class="option-description">Only people you've connected with can see your full profile.</p>
+                                            </div>
+                                            <div class="radio-option">
+                                                <input type="radio" id="visibility-private" name="profile-visibility" value="private">
+                                                <label for="visibility-private">Private</label>
+                                                <p class="option-description">Your profile is only visible to you and employers you've applied to.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>Search engine visibility</label>
+                                        <div class="switch-container">
+                                            <label class="switch">
+                                                <input type="checkbox" id="seo-visible" name="seo-visible" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <span class="switch-label">Allow search engines to index your profile</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h3>Contact Preferences</h3>
+                                    <div class="form-group">
+                                        <label>Who can send you messages?</label>
+                                        <div class="radio-group">
+                                            <div class="radio-option">
+                                                <input type="radio" id="messages-everyone" name="message-permissions" value="everyone" checked>
+                                                <label for="messages-everyone">Everyone</label>
+                                            </div>
+                                            <div class="radio-option">
+                                                <input type="radio" id="messages-connections" name="message-permissions" value="connections">
+                                                <label for="messages-connections">Only Connections</label>
+                                            </div>
+                                            <div class="radio-option">
+                                                <input type="radio" id="messages-applied" name="message-permissions" value="applied">
+                                                <label for="messages-applied">Only Employers I've Applied To</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>Job opportunity notifications</label>
+                                        <div class="switch-container">
+                                            <label class="switch">
+                                                <input type="checkbox" id="job-notifications" name="job-notifications" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <span class="switch-label">Allow employers to contact you with job opportunities</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h3>Activity Sharing</h3>
+                                    <div class="checkbox-group">
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="share-applications" name="share-applications">
+                                            <label for="share-applications">Share my job applications with my network</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="share-achievements" name="share-achievements" checked>
+                                            <label for="share-achievements">Share my achievements and certifications</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="share-profile-updates" name="share-profile-updates" checked>
+                                            <label for="share-profile-updates">Notify my network about profile updates</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Notification Settings -->
+                        <div class="settings-section" id="notification-settings">
+                            <h2>Notification Settings</h2>
+                            <p class="settings-description">Manage how and when you receive notifications.</p>
+                            
+                            <form id="notification-form">
+                                <div class="form-section">
+                                    <h3>Email Notifications</h3>
+                                    <div class="notification-matrix">
+                                        <div class="notification-header">
+                                            <div class="notification-type-header">Notification Type</div>
+                                            <div class="notification-option-header">Email</div>
+                                            <div class="notification-option-header">Push</div>
+                                            <div class="notification-option-header">In-app</div>
+                                        </div>
+                                        
+                                        <div class="notification-row">
+                                            <div class="notification-type">
+                                                <span>Job Matches</span>
+                                                <small>New jobs that match your preferences</small>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="job-matches-email" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="job-matches-push" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="job-matches-inapp" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="notification-row">
+                                            <div class="notification-type">
+                                                <span>Application Updates</span>
+                                                <small>Status changes to your applications</small>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="application-updates-email" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="application-updates-push" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="application-updates-inapp" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="notification-row">
+                                            <div class="notification-type">
+                                                <span>Messages</span>
+                                                <small>New messages from employers or contacts</small>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="messages-email" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="messages-push" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="messages-inapp" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="notification-row">
+                                            <div class="notification-type">
+                                                <span>Profile Views</span>
+                                                <small>When someone views your profile</small>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="profile-views-email">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="profile-views-push">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="profile-views-inapp" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="notification-row">
+                                            <div class="notification-type">
+                                                <span>Network Updates</span>
+                                                <small>Updates from your connections</small>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="network-updates-email">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="network-updates-push">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="network-updates-inapp" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="notification-row">
+                                            <div class="notification-type">
+                                                <span>Platform Updates</span>
+                                                <small>New features and important announcements</small>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="platform-updates-email" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="platform-updates-push">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="notification-option">
+                                                <label class="switch small">
+                                                    <input type="checkbox" name="platform-updates-inapp" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h3>Notification Frequency</h3>
+                                    <div class="form-group">
+                                        <label for="email-digest">Email Digest Frequency</label>
+                                        <select id="email-digest" name="email-digest">
+                                            <option value="immediate">Send immediately</option>
+                                            <option value="daily" selected>Daily digest</option>
+                                            <option value="weekly">Weekly digest</option>
+                                            <option value="never">Never send digests</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>Quiet Hours</label>
+                                        <div class="switch-container">
+                                            <label class="switch">
+                                                <input type="checkbox" id="quiet-hours" name="quiet-hours" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <span class="switch-label">Enable quiet hours for push notifications</span>
+                                        </div>
+                                        
+                                        <div class="quiet-hours-settings">
+                                            <div class="time-range">
+                                                <div class="time-input">
+                                                    <label for="quiet-start">From</label>
+                                                    <input type="time" id="quiet-start" name="quiet-start" value="22:00">
+                                                </div>
+                                                <div class="time-input">
+                                                    <label for="quiet-end">To</label>
+                                                    <input type="time" id="quiet-end" name="quiet-end" value="07:00">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Appearance Settings -->
+                        <div class="settings-section" id="appearance-settings">
+                            <h2>Appearance Settings</h2>
+                            <p class="settings-description">Customize the look and feel of your interface.</p>
+                            
+                            <form id="appearance-form">
+                                <div class="form-section">
+                                    <h3>Theme</h3>
+                                    <div class="theme-selector">
+                                        <div class="theme-option active">
+                                            <div class="theme-preview light-theme">
+                                                <div class="theme-header"></div>
+                                                <div class="theme-content">
+                                                    <div class="theme-sidebar"></div>
+                                                    <div class="theme-main"></div>
+                                                </div>
+                                            </div>
+                                            <div class="theme-label">
+                                                <input type="radio" id="theme-light" name="theme" value="light" checked>
+                                                <label for="theme-light">Light</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="theme-option">
+                                            <div class="theme-preview dark-theme">
+                                                <div class="theme-header"></div>
+                                                <div class="theme-content">
+                                                    <div class="theme-sidebar"></div>
+                                                    <div class="theme-main"></div>
+                                                </div>
+                                            </div>
+                                            <div class="theme-label">
+                                                <input type="radio" id="theme-dark" name="theme" value="dark">
+                                                <label for="theme-dark">Dark</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="theme-option">
+                                            <div class="theme-preview system-theme">
+                                                <div class="theme-header"></div>
+                                                <div class="theme-content">
+                                                    <div class="theme-sidebar"></div>
+                                                    <div class="theme-main"></div>
+                                                </div>
+                                            </div>
+                                            <div class="theme-label">
+                                                <input type="radio" id="theme-system" name="theme" value="system">
+                                                <label for="theme-system">System Default</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h3>Color Accent</h3>
+                                    <div class="color-selector">
+                                        <div class="color-option">
+                                            <input type="radio" id="color-blue" name="accent-color" value="blue" checked>
+                                            <label for="color-blue" class="color-swatch blue"></label>
+                                        </div>
+                                        <div class="color-option">
+                                            <input type="radio" id="color-green" name="accent-color" value="green">
+                                            <label for="color-green" class="color-swatch green"></label>
+                                        </div>
+                                        <div class="color-option">
+                                            <input type="radio" id="color-purple" name="accent-color" value="purple">
+                                            <label for="color-purple" class="color-swatch purple"></label>
+                                        </div>
+                                        <div class="color-option">
+                                            <input type="radio" id="color-orange" name="accent-color" value="orange">
+                                            <label for="color-orange" class="color-swatch orange"></label>
+                                        </div>
+                                        <div class="color-option">
+                                            <input type="radio" id="color-red" name="accent-color" value="red">
+                                            <label for="color-red" class="color-swatch red"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h3>Layout Options</h3>
+                                    <div class="form-group">
+                                        <label>Sidebar Position</label>
+                                        <div class="radio-group">
+                                            <div class="radio-option">
+                                                <input type="radio" id="sidebar-left" name="sidebar-position" value="left" checked>
+                                                <label for="sidebar-left">Left</label>
+                                            </div>
+                                            <div class="radio-option">
+                                                <input type="radio" id="sidebar-right" name="sidebar-position" value="right">
+                                                <label for="sidebar-right">Right</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>Density</label>
+                                        <div class="radio-group">
+                                            <div class="radio-option">
+                                                <input type="radio" id="density-compact" name="layout-density" value="compact">
+                                                <label for="density-compact">Compact</label>
+                                            </div>
+                                            <div class="radio-option">
+                                                <input type="radio" id="density-comfortable" name="layout-density" value="comfortable" checked>
+                                                <label for="density-comfortable">Comfortable</label>
+                                            </div>
+                                            <div class="radio-option">
+                                                <input type="radio" id="density-spacious" name="layout-density" value="spacious">
+                                                <label for="density-spacious">Spacious</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>Font Size</label>
+                                        <div class="range-slider">
+                                            <span class="range-label">Small</span>
+                                            <input type="range" id="font-size" name="font-size" min="1" max="5" value="3">
+                                            <span class="range-label">Large</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>

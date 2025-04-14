@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Jobs - Freelance & Internship Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-briefcase"></i>
+            <span>Freelance & Internship Hub</span>
+        </div>
+        <div class="top-nav">
+            <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="jobs.html"><i class="fas fa-search"></i> Find Jobs</a>
+            <a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a>
+            <a href="messages.html"><i class="fas fa-comment"></i> Messages</a>
+        </div>
+        <div class="user-menu">
+            <div class="notifications-dropdown" id="notifications">
+                <div class="notifications-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notifications-count">3</span>
+                </div>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="auth-buttons">
+                <button class="login-btn" id="login-btn">Log In</button>
+                <button class="signup-btn" id="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="profile-summary">
+                <div class="profile-pic">
+                    <img src="C:\Users\HerrRayen\Desktop\projet federe\OpportuNet.png" alt="Profile" id="profile-avatar">
+                </div>
+                <h3 id="user-name">Guest User</h3>
+                <p id="user-title">Welcome!</p>
+            </div>
+            
+            <div class="sidebar-menu">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="jobs.html"><i class="fas fa-search"></i> Find Jobs</a></li>
+                    <li><a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a></li>
+                    <li><a href="saved.html" class="active"><i class="fas fa-heart"></i> Saved Jobs</a></li>
+                    <li><a href="messages.html"><i class="fas fa-comment"></i> Messages</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </div>
+            
+            <div class="premium-banner">
+                <h4>Upgrade to Premium</h4>
+                <p>Get access to advanced features!</p>
+                <button class="btn btn-primary btn-sm">Upgrade Now</button>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <div class="content" id="main-content">
+            <div class="page-header">
+                <h1><i class="fas fa-heart"></i> Saved Jobs</h1>
+                <div class="actions">
+                    <button class="btn btn-outline" id="clear-all-saved"><i class="fas fa-trash"></i> Clear All</button>
+                    <div class="search-container">
+                        <input type="text" placeholder="Search saved jobs..." id="search-saved">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="saved-jobs-container">
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label>Sort by:</label>
+                        <select class="filter-select" id="sort-saved">
+                            <option value="date-desc">Date Saved (Newest)</option>
+                            <option value="date-asc">Date Saved (Oldest)</option>
+                            <option value="title-asc">Job Title (A-Z)</option>
+                            <option value="title-desc">Job Title (Z-A)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Filter by:</label>
+                        <select class="filter-select" id="filter-job-type">
+                            <option value="all">All Job Types</option>
+                            <option value="freelance">Freelance</option>
+                            <option value="internship">Internship</option>
+                            <option value="fulltime">Full-time</option>
+                            <option value="parttime">Part-time</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Saved Jobs List -->
+                <div class="saved-jobs-list">
+                    <!-- Example Saved Job Item 1 -->
+                    <div class="job-card saved">
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="/api/placeholder/60/60" alt="Company Logo">
+                            </div>
+                            <div class="job-card-title">
+                                <h3>Frontend Developer</h3>
+                                <div class="company-name">TechCorp Solutions</div>
+                                <div class="job-location"><i class="fas fa-map-marker-alt"></i> Remote</div>
+                            </div>
+                            <div class="job-actions">
+                                <button class="unsave-btn" title="Remove from saved"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="job-card-body">
+                            <div class="job-tags">
+                                <span class="job-tag job-type">Freelance</span>
+                                <span class="job-tag job-duration">3 months</span>
+                                <span class="job-tag job-level">Intermediate</span>
+                            </div>
+                            <p class="job-description">Build responsive interfaces using React.js for our e-commerce platform. Experience with Redux and modern CSS frameworks required.</p>
+                            <div class="job-meta">
+                                <div class="salary"><i class="fas fa-money-bill"></i> $30-45/hr</div>
+                                <div class="saved-date">Saved 2 days ago</div>
+                            </div>
+                        </div>
+                        <div class="job-card-footer">
+                            <button class="btn btn-primary">Apply Now</button>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Saved Job Item 2 -->
+                    <div class="job-card saved">
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="/api/placeholder/60/60" alt="Company Logo">
+                            </div>
+                            <div class="job-card-title">
+                                <h3>UX/UI Design Intern</h3>
+                                <div class="company-name">Creative Design Agency</div>
+                                <div class="job-location"><i class="fas fa-map-marker-alt"></i> New York, NY</div>
+                            </div>
+                            <div class="job-actions">
+                                <button class="unsave-btn" title="Remove from saved"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="job-card-body">
+                            <div class="job-tags">
+                                <span class="job-tag job-type">Internship</span>
+                                <span class="job-tag job-duration">6 months</span>
+                                <span class="job-tag job-level">Entry Level</span>
+                            </div>
+                            <p class="job-description">Join our design team to create user-centered designs for various digital products. Knowledge of Figma and UI principles required.</p>
+                            <div class="job-meta">
+                                <div class="salary"><i class="fas fa-money-bill"></i> $18/hr</div>
+                                <div class="saved-date">Saved 1 week ago</div>
+                            </div>
+                        </div>
+                        <div class="job-card-footer">
+                            <button class="btn btn-primary">Apply Now</button>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Saved Job Item 3 -->
+                    <div class="job-card saved">
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="/api/placeholder/60/60" alt="Company Logo">
+                            </div>
+                            <div class="job-card-title">
+                                <h3>Backend Developer</h3>
+                                <div class="company-name">DataSystems Inc.</div>
+                                <div class="job-location"><i class="fas fa-map-marker-alt"></i> Remote</div>
+                            </div>
+                            <div class="job-actions">
+                                <button class="unsave-btn" title="Remove from saved"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="job-card-body">
+                            <div class="job-tags">
+                                <span class="job-tag job-type">Full-time</span>
+                                <span class="job-tag job-level">Senior</span>
+                            </div>
+                            <p class="job-description">Develop and maintain server-side applications using Node.js, Express, and MongoDB. Experience with microservices architecture desired.</p>
+                            <div class="job-meta">
+                                <div class="salary"><i class="fas fa-money-bill"></i> $85,000-110,000/year</div>
+                                <div class="saved-date">Saved 3 weeks ago</div>
+                            </div>
+                        </div>
+                        <div class="job-card-footer">
+                            <button class="btn btn-primary">Apply Now</button>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Empty state (hidden by default, shown when no saved jobs) -->
+                <div class="empty-state" style="display: none;">
+                    <div class="empty-state-icon">
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                    <h3>No Saved Jobs</h3>
+                    <p>You haven't saved any jobs yet. Browse available positions and save the ones you're interested in.</p>
+                    <a href="jobs.html" class="btn btn-primary">Find Jobs</a>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="page-btn prev" disabled><i class="fas fa-chevron-left"></i></button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modals -->
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal">
+            <!-- Login form will be inserted here -->
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="signup-modal">
+        <div class="modal">
+            <!-- Signup form will be inserted here -->
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="job-detail-modal">
+        <div class="modal">
+            <!-- Job details will be inserted here -->
+        </div>
+    </div>
+    
+    <!-- Toast container for notifications -->
+    <div class="toast-container" id="toast-container">
+        <!-- Toasts will be inserted here -->
+    </div>
+    
+    <!-- Mobile navigation toggle button -->
+    <button class="toggle-sidebar" id="toggle-sidebar">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications - Freelance & Internship Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-briefcase"></i>
+            <span>Freelance & Internship Hub</span>
+        </div>
+        <div class="top-nav">
+            <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="jobs.html"><i class="fas fa-search"></i> Find Jobs</a>
+            <a href="applications.html" class="active"><i class="fas fa-file-alt"></i> Applications</a>
+            <a href="messages.html"><i class="fas fa-comment"></i> Messages</a>
+        </div>
+        <div class="user-menu">
+            <div class="notifications-dropdown" id="notifications">
+                <div class="notifications-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notifications-count">3</span>
+                </div>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="auth-buttons">
+                <button class="login-btn" id="login-btn">Log In</button>
+                <button class="signup-btn" id="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="profile-summary">
+                <div class="profile-pic">
+                    <img src="C:\Users\HerrRayen\Desktop\projet federe\OpportuNet.png" alt="Profile" id="profile-avatar">
+                </div>
+                <h3 id="user-name">Guest User</h3>
+                <p id="user-title">Welcome!</p>
+            </div>
+            
+            <div class="sidebar-menu">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="jobs.html"><i class="fas fa-search"></i> Find Jobs</a></li>
+                    <li><a href="applications.html" class="active"><i class="fas fa-file-alt"></i> Applications</a></li>
+                    <li><a href="saved.html"><i class="fas fa-heart"></i> Saved Jobs</a></li>
+                    <li><a href="messages.html"><i class="fas fa-comment"></i> Messages</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </div>
+            
+            <div class="premium-banner">
+                <h4>Upgrade to Premium</h4>
+                <p>Get access to advanced features!</p>
+                <button class="btn btn-primary btn-sm">Upgrade Now</button>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <div class="content" id="main-content">
+            <div class="page-header">
+                <h1><i class="fas fa-file-alt"></i> My Applications</h1>
+                <div class="actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search applications..." id="search-applications">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="applications-container">
+                <!-- Tabs for different application statuses -->
+                <div class="tabs">
+                    <button class="tab-btn active" data-status="all">All Applications <span class="count">5</span></button>
+                    <button class="tab-btn" data-status="pending">Pending <span class="count">2</span></button>
+                    <button class="tab-btn" data-status="in-review">In Review <span class="count">1</span></button>
+                    <button class="tab-btn" data-status="interview">Interview <span class="count">1</span></button>
+                    <button class="tab-btn" data-status="completed">Completed <span class="count">1</span></button>
+                </div>
+                
+                <!-- Filter options -->
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label>Sort by:</label>
+                        <select class="filter-select" id="sort-applications">
+                            <option value="date-desc">Application Date (Newest)</option>
+                            <option value="date-asc">Application Date (Oldest)</option>
+                            <option value="status">Application Status</option>
+                            <option value="company">Company Name</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Job Type:</label>
+                        <select class="filter-select" id="filter-job-type">
+                            <option value="all">All Types</option>
+                            <option value="freelance">Freelance</option>
+                            <option value="internship">Internship</option>
+                            <option value="fulltime">Full-time</option>
+                            <option value="parttime">Part-time</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Applications List -->
+                <div class="applications-list">
+                    <!-- Application Item 1 - Pending -->
+                    <div class="application-card" data-status="pending">
+                        <div class="application-status pending">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Pending</span>
+                        </div>
+                        <div class="application-header">
+                            <div class="company-logo">
+                                <img src="/api/placeholder/60/60" alt="Company Logo">
+                            </div>
+                            <div class="application-title">
+                                <h3>Frontend Developer</h3>
+                                <div class="company-name">TechCorp Solutions</div>
+                                <div class="job-type">Freelance</div>
+                            </div>
+                        </div>
+                        <div class="application-body">
+                            <div class="application-info">
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-calendar-alt"></i> Applied on:</span>
+                                    <span class="value">April 10, 2025</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-clock"></i> Last Updated:</span>
+                                    <span class="value">April 10, 2025</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-money-bill"></i> Salary:</span>
+                                    <span class="value">$30-45/hr</span>
+                                </div>
+                            </div>
+                            <div class="application-progress">
+                                <div class="progress-steps">
+                                    <div class="step completed">Applied</div>
+                                    <div class="step">Review</div>
+                                    <div class="step">Interview</div>
+                                    <div class="step">Decision</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 25%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="application-footer">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-danger-outline">Withdraw</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Application Item 2 - In Review -->
+                    <div class="application-card" data-status="in-review">
+                        <div class="application-status in-review">
+                            <span class="status-dot"></span>
+                            <span class="status-text">In Review</span>
+                        </div>
+                        <div class="application-header">
+                            <div class="company-logo">
+                                <img src="/api/placeholder/60/60" alt="Company Logo">
+                            </div>
+                            <div class="application-title">
+                                <h3>Full Stack Developer</h3>
+                                <div class="company-name">InnovateTech Inc.</div>
+                                <div class="job-type">Full-time</div>
+                            </div>
+                        </div>
+                        <div class="application-body">
+                            <div class="application-info">
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-calendar-alt"></i> Applied on:</span>
+                                    <span class="value">April 5, 2025</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-clock"></i> Last Updated:</span>
+                                    <span class="value">April 8, 2025</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-money-bill"></i> Salary:</span>
+                                    <span class="value">$90,000-110,000/yr</span>
+                                </div>
+                            </div>
+                            <div class="application-progress">
+                                <div class="progress-steps">
+                                    <div class="step completed">Applied</div>
+                                    <div class="step active">Review</div>
+                                    <div class="step">Interview</div>
+                                    <div class="step">Decision</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="application-footer">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-danger-outline">Withdraw</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Application Item 3 - Interview -->
+                    <div class="application-card" data-status="interview">
+                        <div class="application-status interview">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Interview</span>
+                        </div>
+                        <div class="application-header">
+                            <div class="company-logo">
+                                <img src="/api/placeholder/60/60" alt="Company Logo">
+                            </div>
+                            <div class="application-title">
+                                <h3>UX Designer</h3>
+                                <div class="company-name">Creative Design Studio</div>
+                                <div class="job-type">Part-time</div>
+                            </div>
+                        </div>
+                        <div class="application-body">
+                            <div class="application-info">
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-calendar-alt"></i> Applied on:</span>
+                                    <span class="value">March 29, 2025</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-clock"></i> Last Updated:</span>
+                                    <span class="value">April 11, 2025</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-money-bill"></i> Salary:</span>
+                                    <span class="value">$35/hr</span>
+                                </div>
+                            </div>
+                            <div class="next-step-info">
+                                <div class="next-step-icon">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="next-step-details">
+                                    <h4>Video Interview Scheduled</h4>
+                                    <p><i class="fas fa-calendar"></i> April 15, 2025 | <i class="fas fa-clock"></i> 2:00 PM</p>
+                                    <button class="btn btn-sm btn-primary">View Details</button>
+                                </div>
+                            </div>
+                            <div class="application-progress">
+                                <div class="progress-steps">
+                                    <div class="step completed">Applied</div>
+                                    <div class="step completed">Review</div>
+                                    <div class="step active">Interview</div>
+                                    <div class="step">Decision</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="application-footer">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-danger-outline">Withdraw</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Application Item 4 - Completed (Accepted) -->
+                    <div class="application-card" data-status="completed">
+                        <div class="application-status completed accepted">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Accepted</span>
+                        </div>
+                        <div class="application-header">
+                            <div class="company-logo">
+                                <img src="/api/placeholder/60/60" alt="Company Logo">
+                            </div>
+                            <div class="application-title">
+                                <h3>Content Writer</h3>
+                                <div class="company-name">MediaPulse Publishing</div>
+                                <div class="job-type">Freelance</div>
+                            </div>
+                        </div>
+                        <div class="application-body">
+                            <div class="application-info">
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-calendar-alt"></i> Applied on:</span>
+                                    <span class="value">March 15, 2025</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-clock"></i> Last Updated:</span>
+                                    <span class="value">April 2, 2025</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-money-bill"></i> Salary:</span>
+                                    <span class="value">$0.15/word</span>
+                                </div>
+                            </div>
+                            <div class="next-step-info success">
+                                <div class="next-step-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="next-step-details">
+                                    <h4>Application Accepted!</h4>
+                                    <p>You've been selected for this position. Contract details have been sent to your email.</p>
+                                    <button class="btn btn-sm btn-success">Start Onboarding</button>
+                                </div>
+                            </div>
+                            <div class="application-progress">
+                                <div class="progress-steps">
+                                    <div class="step completed">Applied</div>
+                                    <div class="step completed">Review</div>
+                                    <div class="step completed">Interview</div>
+                                    <div class="step completed">Decision</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="application-footer">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-primary">View Contract</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Application Item 5 - Pending -->
+                    <div class="application-card" data-status="pending">
+                        <div class="application-status pending">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Pending</span>
+                        </div>
+                        <div class="application-header">
+                            <div class="company-logo">
+                                <img src="/api/placeholder/60/60" alt="Company Logo">
+                            </div>
+                            <div class="application-title">
+                                <h3>Data Analyst Intern</h3>
+                                <div class="company-name">DataInsights Analytics</div>
+                                <div class="job-type">Internship</div>
+                            </div>
+                        </div>
+                        <div class="application-body">
+                            <div class="application-info">
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-calendar-alt"></i> Applied on:</span>
+                                    <span class="value">April 12, 2025</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-clock"></i> Last Updated:</span>
+                                    <span class="value">April 12, 2025</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-money-bill"></i> Salary:</span>
+                                    <span class="value">$22/hr</span>
+                                </div>
+                            </div>
+                            <div class="application-progress">
+                                <div class="progress-steps">
+                                    <div class="step completed">Applied</div>
+                                    <div class="step">Review</div>
+                                    <div class="step">Interview</div>
+                                    <div class="step">Decision</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 25%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="application-footer">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-danger-outline">Withdraw</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Empty state (hidden by default) -->
+                <div class="empty-state" style="display: none;">
+                    <div class="empty-state-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>No Applications Found</h3>
+                    <p>You haven't submitted any applications yet or none match your current filters.</p>
+                    <a href="jobs.html" class="btn btn-primary">Find Jobs to Apply</a>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="page-btn prev" disabled><i class="fas fa-chevron-left"></i></button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modals -->
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal">
+            <!-- Login form will be inserted here -->
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="signup-modal">
+        <div class="modal">
+            <!-- Signup form will be inserted here -->
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="application-detail-modal">
+        <div class="modal">
+            <!-- Application details will be inserted here -->
+        </div>
+    </div>
+    
+    <!-- Toast container for notifications -->
+    <div class="toast-container" id="toast-container">
+        <!-- Toasts will be inserted here -->
+    </div>
+    
+    <!-- Mobile navigation toggle button -->
+    <button class="toggle-sidebar" id="toggle-sidebar">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+</body>
+</html>
